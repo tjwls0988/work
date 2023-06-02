@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .b {
+        position: relative;
+        left: 101px;
+        top: -102px;
+      }
+      .c {
+        position: relative;
+        left: 202px;
+        top: -204px;
+      }
+      .aa {
+        position: relative;
+        width: 100%;
+      }
+      .cc {
+        position: absolute;
+        top: 0;
+        left: 200px;
+      }
+      .bb {
+        position: absolute;
+        top: 0;
+        left: 400px;
+      }
+      .aaa,
+      .bbb,
+      .ccc {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="c">c</div>
+    <div class="aa">
+      <div class="aa">aa</div>
+      <div class="bb">bb</div>
+      <div class="cc">cc</div>
+    </div>
+  </body>
+</html>

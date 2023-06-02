@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=yes,minimum-scale=1,maximum-scale=1"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 100%;
+        /* max-width: 1280px; */
+        margin: 0 auto;
+      }
+      #box_a {
+        background: #aaa;
+        height: 400px;
+      }
+      #wrap .con {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+      }
+      #wrap .con > div {
+        flex: 1 0 100%;
+      }
+      #box_b {
+        background: #bbb;
+      }
+      #box_c {
+        background: #ccc;
+      }
+      #box_d {
+        background: #ddd;
+      }
+      @media screen and (min-width: 500px) {
+        #wrap .con {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        #wrap .con > div {
+          flex-basis: 40%;
+        }
+        #wrap .con #box_d {
+          flex-basis: 100%;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        #wrap {
+          width: 90%;
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        #wrap {
+          width: 80%;
+        }
+        #wrap .con {
+          flex-direction: row;
+          flex-wrap: nowrap;
+        }
+        #wrap .con > div {
+          flex-basis: 30%;
+        }
+        #wrap .con #box_d {
+          flex-basis: 30%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="box_a"></div>
+      <div class="con">
+        <div id="box_b"></div>
+        <div id="box_c"></div>
+        <div id="box_d"></div>
+      </div>
+    </div>
+  </body>
+</html>

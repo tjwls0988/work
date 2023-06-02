@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        padding: 10px;
+        grid-template-areas:
+          "header slide slide"
+          "header mid mid"
+          "header footer footer";
+
+        width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: 150px auto;
+        grid-template-rows: 300px 200px 100px;
+      }
+
+      .item1 {
+        display: grid;
+        grid-template-columns: 100px auto;
+        grid-area: header;
+        background: #bbb;
+      }
+      .item1 .logo {
+        background: deepskyblue;
+      }
+      .item1 .menu {
+        background: lightsteelblue;
+      }
+      .item2 {
+        grid-area: slide;
+        background: #ddd;
+      }
+      .item3 {
+        display: grid;
+        grid-template-areas: "notice banner go";
+        grid-template-columns: 310px auto 310px;
+        grid-area: mid;
+        background: #cdcdcd;
+      }
+      .item3 .notice {
+        grid-area: notice;
+        background: lightcyan;
+      }
+      .item3 .banner {
+        grid-area: banner;
+        background: lightblue;
+      }
+      .item3 .go {
+        grid-area: go;
+        background: lightcyan;
+      }
+
+      .item6 {
+        display: grid;
+        grid-template-areas:
+          "logo menu"
+          "logo copyright";
+        grid-template-columns: 200px auto;
+        grid-area: footer;
+        background: #bbb;
+      }
+      .item6 .logo {
+        grid-area: logo;
+        background: deepskyblue;
+      }
+      .item6 .menu {
+        grid-area: menu;
+        background: lightsteelblue;
+      }
+      .item6 .copyright {
+        grid-area: copyright;
+        background: rgb(22, 111, 228);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item item1">
+        <div class="logo">logo</div>
+        <div class="menu">menu</div>
+      </div>
+      <div class="grid-item item2">slide</div>
+
+      <div class="grid-item item3">
+        <div class="notice">공지사항</div>
+        <div class="banner">배너</div>
+        <div class="go">바로가기</div>
+      </div>
+      <div class="grid-item item6">
+        <div class="logo">logo</div>
+        <div class="menu">menu</div>
+        <div class="copyright">copyright</div>
+      </div>
+    </div>
+  </body>
+</html>

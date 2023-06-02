@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clearfix::before,
+      input {
+        display: none;
+      }
+      div {
+        width: 0;
+        height: 0;
+        border-left: 10px solid #000;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: none;
+        margin: 100px auto 20px;
+      }
+      ul {
+        list-style: none;
+        margin: 0 auto;
+      }
+      ul li {
+        float: left;
+        width: 100px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        padding: 10px 20px;
+        border: 1px solid black;
+        border-radius: 50px;
+      }
+      #start:checked ~ div:first-child {
+        animation: move 0.5s linear infinite alternate;
+      }
+      #start:checked ~ div:last-child {
+        animation: move_up 0.5s linear infinite alternate;
+      }
+      #start:checked ~ ul li:first-child label,
+      #stop:checked ~ ul li:last-child label {
+        background: #000;
+        color: #fff;
+      }
+      @keyframes move {
+        from {
+          transform: translateX(-5px);
+        }
+        to {
+          transform: translateX(5px);
+        }
+      }
+      @keyframes move_up {
+        from {
+          transform: translateX(-5px);
+        }
+        to {
+          transform: translateX(5px);
+        }
+      }
+      #stop:checked ~ section div {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="btn" id="start" checked />
+    <input type="radio" name="btn" id="stop" checked />
+    <div></div>
+    <div></div>
+    <ul>
+      <li><label for="start">start</label></li>
+      <li><label for="stop">stop</label></li>
+    </ul>
+  </body>
+</html>

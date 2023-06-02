@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div.a {
+        border: 1px solid black;
+        overflow: hidden;
+        text-align: center;
+        margin: 10px auto;
+      }
+      div.b {
+        border: 1px solid red;
+      }
+      div.b > div {
+        display: inline;
+        background-color: gray;
+        border: 1px solid greenyellow;
+      }
+      dic.c {
+        width: 1280px;
+        margin: auto;
+        border: 1px solid purple;
+      }
+      div.c div:first-child {
+        float: right;
+        height: 100px;
+        border: 1px solid yellow;
+      }
+      div.c div:last-child {
+        float: right;
+        height: 100px;
+        border: 1px solid black;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <div>블록 태그로 그룹정의태그</div>
+      <div>줄바꿈이 일어납니다.</div>
+      <div>가로, 세로크기 지정이 가능합니다.</div>
+      <div>
+        텍스트와 인라인 태그와 블록태그 모두가 자식으로 포함할 수 있습니다.
+      </div>
+    </div>
+    <div class="b">
+      <div>
+        하위요소
+        <div>후손요소</div>
+      </div>
+      <div>하위요소</div>
+      <div>하위요소</div>
+      <div>하위요소</div>
+    </div>
+    <div class="c">
+      <div>left</div>
+      <div>right</div>
+    </div>
+  </body>
+</html>

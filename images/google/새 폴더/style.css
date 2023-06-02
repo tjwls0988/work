@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: Arial, "맑은 고딕", "sans-serif";
+}
+header {
+  height: 60px;
+  padding: 0 20px;
+}
+header .left {
+  float: left;
+}
+header .right {
+  float: right;
+}
+header ul li {
+  float: left;
+}
+header ul li a {
+  line-height: 60px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+header ul li a:hover {
+  text-decoration: underline;
+}
+header ul.right li:nth-child(3) a {
+  position: relative;
+  display: block;
+}
+header ul.right li:nth-child(3) a:hover {
+  text-decoration: none;
+}
+header ul.right li:nth-child(3) a span {
+  display: block;
+  line-height: 60px;
+}
+header ul.right li:nth-child(3) a::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  opacity: 0;
+  z-index: -1;
+}
+header ul.right li:nth-child(3) a::after {
+  position: absolute;
+  left: -20px;
+  content: "Google 앱";
+  background: #404040;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  border-radius: 5px;
+  opacity: 0;
+}
+header ul.right li:nth-child(3) a:hover::before,
+header ul.right li:nth-child(3) a:hover::after {
+  opacity: 1;
+}
+header ul.right li:nth-child(3) a:hover::after {
+  transition-delay: 0.5s;
+}
+header ul.right li:last-child a {
+  background: #1a73e8;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+header ul.right li:last-child a:hover {
+  text-decoration: none;
+  background: #1b66c9;
+}
+section {
+  margin: 50px 0;
+}
+section h1 {
+  text-align: center;
+}
+section .box {
+  width: 600px;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #e4e4e4;
+  border-radius: 40px;
+  padding: 0 10px;
+}
+section .box input {
+  width: 450px;
+  margin-left: 10px;
+  margin-right: 15px;
+  border: none;
+}
+:focus {
+  outline: none;
+}
+section .box span:nth-of-type(3) img {
+  width: 15px;
+}
+section .box span:nth-of-type(4) img {
+  width: 20px;
+}

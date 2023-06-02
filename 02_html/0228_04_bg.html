@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        height: 1000px;
+        border: 50px solid rgb(red, 0, 0);
+        padding: 20px;
+      }
+
+      .bg1 {
+        background-color: #ccc;
+        /* background-image: url(https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png); */
+        background-image: url(images/photo1.jpg);
+        /* background-position: 50% 50%; */
+        /* background-position: left top; */
+        background-position: left bottom;
+        /* 가로 left center right 세로 top center bottom */
+        /* background-position: 100% 100%; */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-origin: padding-box;
+        background-clip: border-box;
+        background-attachment: fixed;
+        /* background: color image position/size repeat origin clip attachment; */
+      }
+    </style>
+  </head>
+  <body>
+    <p class="bg1"></p>
+  </body>
+</html>

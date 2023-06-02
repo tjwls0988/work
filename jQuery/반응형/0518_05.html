@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      #wrap > div {
+        float: left;
+      }
+      #box_a {
+        width: 20%;
+        height: 400px;
+        background: #aaa;
+      }
+      #box_b {
+        width: 80%;
+        height: 200px;
+        background: #bbb;
+      }
+      #box_c {
+        width: 80%;
+        height: 200px;
+        background: #ccc;
+      }
+      @media screen and (max-width: 1024px) {
+        #wrap > div {
+          float: none;
+          width: 100%;
+        }
+        #box_a {
+          height: 150px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        #box_a {
+          height: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="box_a">a</div>
+      <div id="box_b">b</div>
+      <div id="box_c">c</div>
+    </div>
+  </body>
+</html>

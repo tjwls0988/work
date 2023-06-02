@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 20px;
+        height: 20px;
+        white-space: nowrap;
+        padding: 10px;
+        transition-property: width;
+        transition-duration: 1s;
+      }
+      p:first-child {
+        background: blue;
+      }
+      p:nth-child(2) {
+        background: lightcyan;
+        transition-timing-function: ease;
+        /*시작과 끝이 느리고 중간이 빨라진다*/
+      }
+      p:nth-child(3) {
+        background: lightblue;
+        transition-timing-function: ease-in;
+      }
+      p:nth-child(4) {
+        background: deepskyblue;
+        transition-timing-function: ease-out;
+      }
+      p:nth-child(5) {
+        background: dodgerblue;
+        transition-timing-function: ease-in-out;
+      }
+      p:nth-child(6) {
+        background: darkslateblue;
+        transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+      }
+      div:hover p {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>default</p>
+      <p>ease</p>
+      <p>ease-in</p>
+      <p>ease-out</p>
+      <p>ease-in-out</p>
+      <p>cubic-bezier</p>
+    </div>
+  </body>
+</html>
